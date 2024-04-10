@@ -1,0 +1,283 @@
+@keyframes movingSong{
+    0% { text-align: left; }
+    50%{ text-align: center; }
+    100%{ text-align: end; }
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    color: white;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav{
+    background: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+}
+.nav img{
+    width: 100px;
+    margin-left: 25px;
+}
+.nav ul{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.nav ul li{
+    padding: 10px 30px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Music Css */
+.musicBody{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.musicList{
+    width: 40%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.musicList h1{
+    color: rgb(0, 0, 0);
+}
+.music{
+    border: 2px solid rgb(0, 0, 0);
+    background: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
+    border-radius: 10px;
+    width: 90%;
+    height: 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    
+}
+.music:hover{
+    animation-name: movingSong;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.music img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.music h2{
+    color: black;
+    font-size: 18px;
+    height: 20px;
+    width: 60%;
+    overflow: hidden;
+}
+.music h3 span{
+    margin-right: 10px;
+    color: black;
+}
+.music h3 .fa-play,.fa-pause{
+    font-size: 16px;
+    margin: 0 10px;
+    color: black;
+}
+
+/* Responsive Play Music Css */
+.reponsiveShow{
+    background: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
+    margin-top: 15px;
+    width: 100%;
+    height: 10.7%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+} 
+.respoPregressBar{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+.respoPregressBar input{
+    width: 100%;
+}
+.resMusicShow{
+    overflow: hidden;
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resMusicShow img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.resMusicShow h2{
+    color: black;
+    margin-right: 20px;
+}
+.respImage img{
+    width: 100px;
+    border-radius: 0px;
+} 
+.respoPause{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background: none;
+    border: none;
+}
+.respoPlay{
+    color: black;
+    font-size: 20px;
+}
+
+/* Play Music Show */
+.playShow{
+    background: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
+    border-radius: 10px;
+    width: 40%;
+    height: auto;
+    /* height: 90%; */
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.musicShow{
+    border: 2px solid rgb(10, 10, 10);
+    background: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
+    border-radius: 10px;
+    width: 80%;
+    height: 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+.musicShow img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+.musicShow h2{
+    margin-right: 30px;
+    color: black;
+    font-size: 18px
+}
+.showImg{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.showImg img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.pregressBar{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.pregressBar input{
+    width: 100%;
+    cursor: pointer;
+}
+.time{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+#minute{
+    margin-left: 10px;
+    color: black;
+}
+#second{
+    margin-right: 10px;
+    color: black;
+}
+#lastMinute{
+    margin-left: 10px;
+    color: black;
+}
+#lastSecond{
+    margin-right: 10px;
+    color: black;
+}
+.allBtn{
+    width: 200px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.back,.forw,.pause{
+    background: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
+    border-radius: 10px;
+}
+.allBtn .fa-solid{
+    font-size: 25px;
+    padding: 10px 10px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Media Queries */
+@media (max-width : 850px){
+    .musicBody{
+        display: block;
+    }
+    .musicList{
+        width: 100%;
+    }
+    .playShow{
+        display: none;
+        width: 80%;
+        height: 78vh;
+        margin: auto;
+    }
+    .playShow .pregressBar input,p{
+        overflow: hidden;
+    }
+    .reponsiveShow{
+        opacity: 1;
+    }
+}
